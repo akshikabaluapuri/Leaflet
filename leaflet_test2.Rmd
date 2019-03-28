@@ -1,0 +1,34 @@
+---
+title: "Coursera Assignment"
+author: "Akshika Baluapuri"
+date: "March 28, 2019"
+output: ioslides_presentation
+---
+## March 27, 2019
+
+#### Some attraction points in **NEW YORK** 
+```{r}
+newyork <- data.frame( lat = c(40.748817,40.689247,40.759243, 40.756381,40.785091,40.7117691,40.758896,
+                               40.778965, 40.7795457, 40.752655, 40.7712125,40.753181,40.703830518  ,
+                               40.75583031,40.758160,40.7648, 40.699475),
+
+                      lng= c(-73.985428,-74.044502,-73.979294, -73.988362, -73.968285, -74.012362,-73.985130,
+                             -73.962311,-73.962916,-73.977295,-73.9673607,-73.982254,-74.005666644, -73.97416277,
+                             -73.975418, -73.9797, -74.039559))
+
+
+attracsite <-  c( "Empire State Building" ,"Statue of Liberty" ," Top Of The Rock Observatory",
+                         " Madame Tussauds ", " Central Park", "World Trade Centre","Times Square, Manhattan",
+                  " The Metropolitan Museum of Art ","Brooklyn-Bridge","Grand Central Terminal", 
+                  "The Frick Collection","New York Public Library","Wall Street","Radio City Music Hall", 
+                  "St. Patrick's Cathedral", "Carnegie Hall"," Ellis Island")
+
+newyork%>%
+leaflet()%>%
+    addTiles()%>%
+ addRectangles(lat1 =  40.6572,lng1 = -74.1024,
+                lat2=  40.8072,  lng2 = -73.9017)%>%
+addMarkers(clusterOptions = markerClusterOptions(),popup = attracsite)
+
+```
+
