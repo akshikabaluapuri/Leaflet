@@ -4,6 +4,10 @@ author: "Akshika Baluapuri"
 date: "March 28, 2019"
 output: ioslides_presentation
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
 ## March 27, 2019
 
 #### Some attraction points in **NEW YORK** 
